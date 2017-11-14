@@ -1,0 +1,11 @@
+
+<h3>Edit Your User</h3>
+
+<div style="margin:50px;">
+<%= form_tag update_user_path do %>
+<%= text_field_tag :name, value: @user.name %><br />
+<%= number_field_tag :age, value: @user.age %><br />
+<%= hidden_field_tag  :id,  @user.id %><br />
+<%= submit_tag "Create Profile" %>
+<% end %>
+</div>

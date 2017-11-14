@@ -1,0 +1,29 @@
+<h1>Welcome#products</h1>
+<p>Find me in app/views/welcome/products.html.erb</p>
+
+
+
+
+
+<table border "2">
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Quantity</th>
+	</tr>
+
+
+	<% @products.each do |p| %>
+	<tr>
+
+		<td><%= link_to p.name, show_product_path(id: p.id) %></td>
+		<td><%= number_to_currency p.price %></td>
+		<td><%= p.quantity %></td>
+
+	</tr>
+	<%end%>
+</table>
+
+<p>
+<%= link_to "Return to Index", root_path %>
+</p>
